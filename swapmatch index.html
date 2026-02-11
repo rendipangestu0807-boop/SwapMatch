@@ -3,72 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwapMatch - Global Barter</title>
+    <title>SwapMatch - Barter Online Global</title>
     <style>
-        :root { --blue: #2563eb; --red: #ef4444; --bg: #f1f5f9; --ig: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: var(--bg); color: #1e293b; }
-        .ticker { background: var(--red); color: white; padding: 6px; font-weight: 900; text-align: center; font-size: 10px; position: sticky; top: 0; z-index: 1000; }
-        #loginS { position: fixed; inset: 0; background: white; z-index: 9999; display: flex; align-items: center; justify-content: center; text-align: center; }
-        .box { width: 300px; padding: 20px; border: 1px solid #ddd; border-radius: 20px; }
-        .pp-v { width: 90px; height: 90px; border-radius: 50%; background: #eee; margin: 10px auto; border: 3px solid var(--blue); cursor: pointer; overflow: hidden; }
+        :root { --blue: #2563eb; --red: #ef4444; --bg: #f1f5f9; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family: sans-serif; }
+        body { background: var(--bg); color: #333; }
+        .ticker { background: var(--red); color: white; padding: 6px; font-weight: 900; text-align: center; font-size: 10px; position: sticky; top: 0; z-index: 2000; }
+        #loginS { position: fixed; inset: 0; background: white; z-index: 3000; display: flex; align-items: center; justify-content: center; }
+        .box { width: 320px; text-align: center; padding: 30px; border-radius: 20px; border: 1px solid #ddd; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .pp-v { width: 100px; height: 100px; border-radius: 50%; background: #eee; margin: 15px auto; border: 3px solid var(--blue); cursor: pointer; overflow: hidden; }
         .pp-v img { width: 100%; height: 100%; object-fit: cover; }
-        input, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 10px; outline: none; }
-        .btn { width: 100%; padding: 14px; background: var(--blue); color: white; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; }
-        nav { background: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; position: sticky; top: 22px; z-index: 900; }
+        input, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 12px; outline: none; }
+        .btn { width: 100%; padding: 15px; background: var(--blue); color: white; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; }
+        nav { background: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; position: sticky; top: 22px; z-index: 1000; }
         .container { display: flex; max-width: 1100px; margin: 20px auto; gap: 20px; padding: 0 15px; flex-wrap: wrap; }
         .side { flex: 1; min-width: 300px; }
         .feed { flex: 2; min-width: 350px; }
         .card { background: white; padding: 20px; border-radius: 20px; border: 1px solid #ddd; margin-bottom: 20px; }
-        .post { background: white; border-radius: 20px; margin-bottom: 25px; overflow: hidden; border: 1px solid #ddd; position: relative; }
-        .p-img { width: 100%; height: 260px; background-size: cover; background-position: center; background-color: #eee; }
+        .post { background: white; border-radius: 20px; border: 1px solid #ddd; margin-bottom: 20px; overflow: hidden; position: relative; }
+        .p-img { width: 100%; height: 260px; background: #eee center/cover; }
         .p-info { padding: 20px; }
-        .btn-del { position: absolute; top: 10px; right: 10px; background: rgba(239,68,68,0.9); color: white; border: none; padding: 5px 12px; border-radius: 8px; font-size: 10px; cursor: pointer; }
-        .btn-c { display: block; text-align: center; padding: 12px; border-radius: 12px; color: white; text-decoration: none; font-weight: bold; margin-top: 10px; }
+        .del { position: absolute; top: 10px; right: 10px; background: var(--red); color: white; border: none; padding: 6px 12px; border-radius: 8px; font-size: 10px; font-weight: bold; cursor: pointer; }
+        .btn-c { display: block; text-align: center; padding: 12px; color: white; text-decoration: none; border-radius: 12px; font-weight: bold; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-<div class="ticker">#NOMORECONSUMERISM • BARTER GLOBAL • #NOMORECONSUMERISM</div>
+<div class="ticker">#NOMORECONSUMERISM • BARTER ONLINE GLOBAL • #NOMORECONSUMERISM</div>
 
 <div id="loginS">
     <div class="box">
         <h2 style="color:var(--blue)">SwapMatch</h2>
-        <p style="font-size: 11px; color: var(--blue); font-weight: bold; margin-bottom: 10px;">KLIK FOTO GANTI PP</p>
-        <div class="pp-v" onclick="document.getElementById('fIn').click()"><img id="vP" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rendi"></div>
-        <input type="file" id="fIn" hidden onchange="readImg(this, 'vP')">
-        <input id="inN" placeholder="Nama Lengkap">
+        <div class="pp-v" onclick="document.getElementById('fP').click()"><img id="vP" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rendi"></div>
+        <p style="font-size:10px; color:var(--blue); font-weight:bold;">KLIK FOTO GANTI PP</p>
+        <input type="file" id="fP" hidden onchange="readImg(this,'vP')">
+        <input id="inN" placeholder="Nama Kamu">
         <select id="inT"><option value="wa">WhatsApp</option><option value="ig">Instagram</option></select>
-        <input id="inK" placeholder="Kontak (08... / @...)">
-        <button class="btn" onclick="login()">MULAI BARTER</button>
+        <input id="inK" placeholder="ID Kontak (WA/IG)">
+        <button class="btn" onclick="login()">MASUK</button>
     </div>
 </div>
 
 <nav id="nv" style="display:none">
-    <strong style="color:var(--blue)">SwapMatch</strong>
-    <div onclick="logout()" style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+    <b style="color:var(--blue)">SwapMatch</b>
+    <div style="display:flex; align-items:center; gap:10px;">
         <span id="uN" style="font-weight:bold; font-size:13px;"></span>
-        <img id="uP" src="" style="width:35px; height:35px; border-radius:50%; object-fit:cover; border:2px solid var(--blue)">
+        <img id="uP" src="" style="width:35px; height:35px; border-radius:50%; object-fit:cover; border:2px solid var(--blue);">
     </div>
 </nav>
 
 <div class="container" id="app" style="display:none">
     <aside class="side">
         <div class="card">
-            <h3 style="margin-bottom:10px">Post Barang</h3>
+            <h4>Post Barang</h4>
             <input id="bN" placeholder="Nama Barang">
             <input id="bW" placeholder="Cari Barteran Apa?">
-            <input type="file" id="bF" style="font-size:11px;">
-            <button class="btn" onclick="upload()" style="margin-top:10px">PUBLIKASIKAN</button>
+            <input type="file" id="bF" style="font-size:11px; margin-top:10px;">
+            <button class="btn" onclick="upload()" style="margin-top:10px">PUBLISH GLOBAL</button>
         </div>
+        <button onclick="localStorage.clear();location.reload()" style="width:100%; background:none; border:1px solid #ddd; padding:10px; border-radius:10px; color:gray; cursor:pointer;">Logout / Reset</button>
     </aside>
     <main class="feed" id="fd"></main>
 </div>
 
 <script>
-    // MASUKKAN URL FIREBASE KAMU DI SINI (Contoh: https://xxx.firebaseio.com/)
-    const BASE_URL = "URL_DATABASE_LO"; 
-    const DB_URL = BASE_URL + ".json";
+    // LINK FIREBASE SUDAH TERPASANG
+    const DB_BASE = "https://swapmatch-d796b-default-rtdb.asia-southeast1.firebasedatabase.app"; 
+    const DB_URL = DB_BASE + "/.json";
 
     function compress(file, callback) {
         const reader = new FileReader();
@@ -78,20 +79,29 @@
             img.src = e.target.result;
             img.onload = () => {
                 const canvas = document.createElement('canvas');
-                const scale = 800 / img.width;
-                canvas.width = 800; canvas.height = img.height * scale;
+                const scale = 600 / img.width;
+                canvas.width = 600; canvas.height = img.height * scale;
                 const ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                callback(canvas.toDataURL('image/jpeg', 0.6));
+                callback(canvas.toVDataURL('image/jpeg', 0.6));
             }
         }
     }
 
-    function readImg(i, t) { if(i.files[0]) compress(i.files[0], (url) => document.getElementById(t).src = url); }
+    function readImg(i, t) {
+        if (i.files && i.files[0]) {
+            const reader = new FileReader();
+            reader.readAsDataURL(i.files[0]);
+            reader.onload = (e) => document.getElementById(t).src = e.target.result;
+        }
+    }
 
     function login() {
         const n=document.getElementById('inN').value, t=document.getElementById('inT').value, k=document.getElementById('inK').value, p=document.getElementById('vP').src;
-        if(n && k) { localStorage.setItem('sm_u', JSON.stringify({n,t,k,p})); start(); }
+        if(n && k) {
+            localStorage.setItem('sm_u', JSON.stringify({n,t,k,p}));
+            start();
+        } else { alert("Isi data dulu!"); }
     }
 
     function start() {
@@ -102,7 +112,8 @@
         document.getElementById('app').style.display='flex';
         document.getElementById('uN').innerText = u.n;
         document.getElementById('uP').src = u.p;
-        fetchFeed(); setInterval(fetchFeed, 5000);
+        fetchFeed();
+        setInterval(fetchFeed, 5000); 
     }
 
     async function fetchFeed() {
@@ -110,38 +121,53 @@
             const res = await fetch(DB_URL);
             const data = await res.json();
             let items = [];
-            for (let id in data) items.unshift({id, ...data[id]});
-            const u = JSON.parse(localStorage.getItem('sm_u'));
-            document.getElementById('fd').innerHTML = items.map(p => {
-                let link = p.t === 'wa' ? `https://wa.me/${p.k.startsWith('0')?'62'+p.k.slice(1):p.k}` : `https://instagram.com/${p.k.replace('@','')}`;
-                return `
-                <div class="post">
-                    ${p.o === u.n ? `<button class="btn-del" onclick="hapus('${p.id}')">HAPUS</button>` : ''}
-                    <div class="p-img" style="background-image:url('${p.img}')"></div>
-                    <div class="p-info">
-                        <h3>${p.n}</h3>
-                        <p style="background:#fff7ed; padding:10px; border-radius:10px; margin:5px 0;">Cari: ${p.w}</p>
-                        <small>Owner: ${p.o}</small>
-                        <a href="${link}" target="_blank" class="btn-c" style="background:${p.t==='wa'?'#22c55e':'var(--ig)'}">${p.t==='wa'?'WHATSAPP':'INSTAGRAM'}</a>
-                    </div>
-                </div>`;
-            }).join('');
-        } catch(e) {}
+            if (!data) {
+                items = [{id: "init", n: "Kamera Analog (Contoh)", w: "Lensa", o: "Admin", t: "wa", k: "0812", img: "https://images.unsplash.com/photo-1526170315873-3a5616282a63?w=500"}];
+            } else {
+                for (let id in data) items.unshift({id, ...data[id]});
+            }
+            render(items);
+        } catch(e) { console.log("Database belum aktif atau link salah."); }
     }
 
-    function upload() {
+    function render(data) {
+        const u = JSON.parse(localStorage.getItem('sm_u'));
+        document.getElementById('fd').innerHTML = data.map(p => {
+            let link = p.t === 'wa' ? `https://wa.me/${p.k.startsWith('0')?'62'+p.k.slice(1):p.k}` : `https://instagram.com/${p.k.replace('@','')}`;
+            return `
+            <div class="post">
+                ${p.o === u.n ? `<button class="del" onclick="hapus('${p.id}')">HAPUS</button>` : ''}
+                <div class="p-img" style="background-image:url('${p.img}')"></div>
+                <div class="p-info">
+                    <h3>${p.n}</h3>
+                    <p style="background:#fff7ed; padding:10px; border-radius:10px; margin:5px 0; border:1px solid #fed7aa;">Cari: ${p.w}</p>
+                    <small>Owner: ${p.o}</small>
+                    <a href="${link}" target="_blank" class="btn-c" style="background:${p.t==='wa'?'#22c55e':'linear-gradient(45deg,#f09433,#bc1888)'}">${p.t==='wa'?'WhatsApp':'Instagram'}</a>
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    async function upload() {
         const u=JSON.parse(localStorage.getItem('sm_u')), n=document.getElementById('bN').value, w=document.getElementById('bW').value, f=document.getElementById('bF').files[0];
         if(n && w && f) {
-            compress(f, async (url) => {
-                const post = { n, w, o: u.n, t: u.t, k: u.k, img: url };
+            const reader = new FileReader();
+            reader.readAsDataURL(f);
+            reader.onload = async (e) => {
+                const post = { n, w, o: u.n, t: u.t, k: u.k, img: e.target.result };
                 await fetch(DB_URL, { method: 'POST', body: JSON.stringify(post) });
-                fetchFeed(); document.getElementById('bN').value=""; document.getElementById('bW').value="";
-            });
-        }
+                fetchFeed();
+                document.getElementById('bN').value=""; document.getElementById('bW').value="";
+            };
+        } else { alert("Lengkapi data!"); }
     }
 
-    async function hapus(id) { if(confirm("Hapus?")) { await fetch(BASE_URL + "/" + id + ".json", { method: 'DELETE' }); fetchFeed(); } }
-    function logout() { if(confirm("Logout?")) { localStorage.clear(); location.reload(); } }
+    async function hapus(id) {
+        if(confirm("Hapus postingan ini?")) {
+            await fetch(DB_BASE + "/" + id + ".json", { method: 'DELETE' });
+            fetchFeed();
+        }
+    }
 
     window.onload = () => { if(localStorage.getItem('sm_u')) start(); };
 </script>
